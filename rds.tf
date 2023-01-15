@@ -61,10 +61,12 @@ resource "aws_db_instance" "mysql_standalone" {
 
   instance_class = "db.t2.micro"
 
-  allocated_storage      = 20
-  max_allocated_storage  = 50
-  storage_type           = "gp2"
-  storage_encrypted      = false
+  allocated_storage     = 20
+  max_allocated_storage = 50
+  storage_type          = "gp2"
+  storage_encrypted     = false
+
+  multi_az               = false
   availability_zone      = "ap-northeast-1a"
   db_subnet_group_name   = aws_db_subnet_group.mysql_standalone_subnetgroup.name
   vpc_security_group_ids = [aws_security_group.db_sg.id]
