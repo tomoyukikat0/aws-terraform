@@ -60,3 +60,7 @@ terragrunt
 .env
 .idea/
 *.json
+
+# keypair
+dev-keypair.pem
+dev-keypair.pub
